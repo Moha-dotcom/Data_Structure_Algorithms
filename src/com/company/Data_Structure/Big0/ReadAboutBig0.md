@@ -9,4 +9,4 @@ TIME COMPLEXITY:
 
 
 
-[<br><br>]![Alt text](https://adrianmejia.com/images/time-complexity-examples.png)
+![Alt text](https://adrianmejia.com/images/time-complexity-examples.png)
