@@ -7,4 +7,4 @@ What is Big O Notation?
 TIME COMPLEXITY: 
     - is away of showing how the runtime of a fucntion increase as the size of input increase.
 
-[<img src="time-complexity-examples.png"  style="width:400px;height:480px;">]
+![alt text](<time-complexity-examples.png>) 
