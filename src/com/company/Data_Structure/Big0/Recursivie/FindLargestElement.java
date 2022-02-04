@@ -5,8 +5,10 @@ public class FindLargestElement {
     public static void main(String[] args) {
 
 
-        int arr[] = {9,284, 84, 10,172, 1};
-        System.out.println(findMacNumbRec(arr, arr.length));
+        int arr[] = {11119, 9,284, 84, 10,172, 1, -1};
+        int n = arr.length-1;
+        System.out.println(findMacNumbRec(arr, n));
+
 
 
     }
@@ -16,10 +18,9 @@ public class FindLargestElement {
 
 
     public  static int findMacNumbRec(int [] sampleArray, int n){
-        if ( n == 1)
+        if ( n == 0)
             return sampleArray[0];
 
-
-        return Math.min(sampleArray[n-1],  findMacNumbRec(sampleArray, n-1));
+        return Math.max(sampleArray[n],  findMacNumbRec(sampleArray, n-1));
     }
 }
