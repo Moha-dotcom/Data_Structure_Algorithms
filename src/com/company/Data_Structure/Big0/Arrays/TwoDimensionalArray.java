@@ -43,8 +43,9 @@ public class TwoDimensionalArray {
         for(int row =0; row<arr.length; row++){  // Will take 0(m) complexity
             for(int col = 0; col<arr[row].length; col++){ // O(n)
                 System.out.print(arr[row][col] + " "); // 0(1)
+//                return;
             }
-            System.out.println();   //0(1)
+
 
 
             // Time complexity 0(n)
@@ -55,19 +56,35 @@ public class TwoDimensionalArray {
 
 
 
+
+
     public void search2DArray(int value){
         for(int row = 0; row<arr.length; row++){
             for(int col = 0; col<arr[row].length; col++){
-                if(arr[row][col] == value)
+                if(arr[row][col] == value){
                     System.out.println("value #" + value + " is in " + "Row#" + row + "Col#" + col);
+                    return;
+                }
             }
-
         }
-
-
-
+        System.out.println("Value is not found");
     }
 
+
+    public void deleteFrom2DArray(int value){
+
+        for(int row = 0; row<arr.length; row++){
+            for(int col = 0; col<arr[row].length; col++){
+                if(arr[row][col] == value){
+                    arr[row][col] = Integer.MIN_VALUE;
+                    System.out.println("Deleted Value From Array: ");
+                    return;
+                }
+            }
+        }
+        System.out.println("Element Not found to be deleted");
+
+    }
 
 }
 
@@ -77,11 +94,17 @@ class main{
 
      TwoDimensionalArray arrys = new TwoDimensionalArray(3, 3);
      arrys.insertValueInTheArray(0,0,10);
-     arrys.insertValueInTheArray(0,1,1);
-     arrys.insertValueInTheArray(0,2,12);
-        arrys.insertValueInTheArray(2,2,40);
+     arrys.insertValueInTheArray(2,1,1);
+     arrys.insertValueInTheArray(1,2,12);
+     arrys.insertValueInTheArray(2,2,40);
      arrys.accessCell(1,2);
-     arrys.tranverse2Darray();
+        arrys.tranverse2Darray();
+        //Searching Element 40 From the array List
      arrys.search2DArray(40);
+        //Deleting Element 40 From the array List
+     arrys.deleteFrom2DArray(40);
+     arrys.deleteFrom2DArray(50);
+        //Tranversing  The whole Array
+     arrys.tranverse2Darray();
     }
 }
