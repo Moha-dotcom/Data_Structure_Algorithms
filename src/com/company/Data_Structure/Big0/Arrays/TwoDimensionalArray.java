@@ -1,5 +1,9 @@
 package com.company.Data_Structure.Big0.Arrays;
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class TwoDimensionalArray {
 
     int arr[][] = null;
@@ -40,17 +44,19 @@ public class TwoDimensionalArray {
 
     public void tranverse2Darray(){
 
-        for(int row =0; row<arr.length; row++){  // Will take 0(m) complexity
-            for(int col = 0; col<arr[row].length; col++){ // O(n)
-                System.out.print(arr[row][col] + " "); // 0(1)
-//                return;
-            }
+        System.out.println(Arrays.deepToString(arr));
 
-
-
-            // Time complexity 0(n)
-            // Space Complexity 0(1)
-        }
+//        for(int row =0; row<arr.length; row++){  // Will take 0(m) complexity
+//            for(int col = 0; col<arr[row].length; col++){ // O(n)
+//                System.out.print(arr[row][col] + " "); // 0(1)
+////                return;
+//            }
+//
+//
+//
+//            // Time complexity 0(n)
+//            // Space Complexity 0(1)
+//        }
 
     }
 
@@ -71,11 +77,11 @@ public class TwoDimensionalArray {
     }
 
 
-    public void deleteFrom2DArray(int value){
+    public void deleteFrom2DArray(int value) {
 
-        for(int row = 0; row<arr.length; row++){
-            for(int col = 0; col<arr[row].length; col++){
-                if(arr[row][col] == value){
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[row].length; col++) {
+                if (arr[row][col] == value) {
                     arr[row][col] = Integer.MIN_VALUE;
                     System.out.println("Deleted Value From Array: ");
                     return;
@@ -106,5 +112,16 @@ class main{
      arrys.deleteFrom2DArray(50);
         //Tranversing  The whole Array
      arrys.tranverse2Darray();
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many days temperature? : ");
+        int numberday = scanner.nextInt();
+        int sum = 0;
+
+
+
+
+
     }
 }
