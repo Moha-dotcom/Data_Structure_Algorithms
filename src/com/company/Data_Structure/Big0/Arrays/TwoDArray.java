@@ -1,9 +1,7 @@
 package com.company.Data_Structure.Big0.Arrays;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class TwoDArray {
 
@@ -37,10 +35,17 @@ public class TwoDArray {
         List<Integer> intarr = new ArrayList<>();
         int j = arr.length - 1;
 
-        for(int i = 0; i<arr.length - 1; i++){
-            j -= i;
-            sum += arr[i][j];
-            intarr.add(arr[i][j]);
+        for(int i = arr.length - 1; i > 0; i--){
+
+            sum += arr[i][i];
+            intarr.add(arr[i][i]);
+
+
+
+
+
+
+
 
 
         }
