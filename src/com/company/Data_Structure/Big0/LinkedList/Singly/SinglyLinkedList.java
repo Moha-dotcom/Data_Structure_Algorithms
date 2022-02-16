@@ -1,45 +1,41 @@
 package com.company.Data_Structure.Big0.LinkedList.Singly;
 
-import java.util.Iterator;
-
 public class SinglyLinkedList {
 
     public Node head;
 
 
+    public void insertBegining(int value) {
+        Node node = new Node(value);
+        if (head == null) {
+            head = node;
+        } else {
+            node.next = head;
+            head = node;
 
-    public void insertBegining(int value){
-       Node node = new Node(value);
-       if(head == null){
-           head = node;
-       }else {
-          node.next = head;
-          head = node;
-
-       }
+        }
     }
 
 
-    public void insertEndPostion(int val){
+    public void insertEndPostion(int val) {
         Node node = new Node(val);
-       if(head == null){
-           head = node;
-       }else {
-           Node temp = head;
-           while( temp.next != null){
-               temp = temp.next;
-           }
+        if (head == null) {
+            head = node;
+        } else {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
 
-           temp.next = node;
+            temp.next = node;
 
-       }
+        }
     }
 
 
-
-    public void printAll(){
+    public void printAll() {
         Node temp = head;
-        while(temp != null){
+        while (temp != null) {
             System.out.print(temp.value + " - > ");
             temp = temp.next;
         }
@@ -50,15 +46,14 @@ public class SinglyLinkedList {
     }
 
 
-
-    private void searchNodeValue(int value){
+    private void searchNodeValue(int value) {
         int location = 0;
-        if(head != null){
+        if (head != null) {
             Node temp = head;
 
-            while(temp != null){
+            while (temp != null) {
 
-                if(temp.value == value){
+                if (temp.value == value) {
                     System.out.println("Found the node at location " + location);
                 }
                 temp = temp.next;
@@ -72,14 +67,34 @@ public class SinglyLinkedList {
         }
 
 
+    }
 
-
-
-
-
+    public void deleteFirstNode() {
+        Node temp = head.next;
+        head = temp;
+        temp = head;
+        printAll();
 
 
     }
+
+    public void deleteGivenNode(int value) {
+
+        if(head != null){
+            System.out.println("Nothing to delete");
+        }else{
+            Node temp = head;
+            while(temp != null){
+                if(temp.value ==  value){
+                    
+                }
+            }
+        }
+
+
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -90,8 +105,11 @@ public class SinglyLinkedList {
         singlyLinkedList.insertEndPostion(33);
 
 
-        singlyLinkedList.printAll();
-        singlyLinkedList.searchNodeValue(88);
+//        singlyLinkedList.printAll();
+//        singlyLinkedList.searchNodeValue(88);
+
+        singlyLinkedList.deleteFirstNode();
+
 
 
 
