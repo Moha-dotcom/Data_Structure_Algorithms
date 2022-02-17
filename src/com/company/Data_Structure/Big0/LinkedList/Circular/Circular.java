@@ -30,13 +30,13 @@ public class Circular {
            node.next = head;
            head = node;
            tail.next = head;
-            // Specified Location
+            // End Location
         }else if(location >= size){
             tail.next = node;
             tail = node;
             tail.next = head;
 
-            // End Location
+            // Specified Location
         }else{
             Node tempNode = head;
             int index = 0;
