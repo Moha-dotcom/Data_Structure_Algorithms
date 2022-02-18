@@ -5,16 +5,28 @@ public class Circular {
     public Node tail;
     int size;
 
+    public Circular(Node head, Node tail, int size) {
+        this.head = head;
+        this.tail = tail;
+        this.size = size;
+    }
 
     public Node CreateSLL(int nodevalue) {
         head = new Node();
-        Node node = new Node();
-        node.value = nodevalue;
-        node.next = node;
-        head = node;
-        tail = node;
-        size = 1;
+        Node newNode = new Node(nodevalue, head );
+        Circular circular = new Circular(newNode, newNode, 1);
         return head;
+
+
+
+//        head = new Node();
+//        Node node = new Node();
+//        node.value = nodevalue;
+//        node.next = node;
+//        head = node;
+//        tail = node;
+//        size = 1;
+//        return head;
     }
 
 
