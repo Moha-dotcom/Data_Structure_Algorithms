@@ -6,11 +6,11 @@ public class Circular {
     int size;
 
 
-    public  Node CreateSLL(int nodevalue){
+    public Node CreateSLL(int nodevalue) {
         head = new Node();
         Node node = new Node();
         node.value = nodevalue;
-        node.next  = node;
+        node.next = node;
         head = node;
         tail = node;
         size = 1;
@@ -18,29 +18,29 @@ public class Circular {
     }
 
 
-    public void insert(int value, int location){
+    public void insert(int value, int location) {
         // New Node
         Node node = new Node();
         node.value = value;
 
-        if(head == null){
+        if (head == null) {
             CreateSLL(value);
             // Front of the LinkedLst
-        }else if(location == 0){
-           node.next = head;
-           head = node;
-           tail.next = head;
+        } else if (location == 0) {
+            node.next = head;
+            head = node;
+            tail.next = head;
             // End Location
-        }else if(location >= size){
+        } else if (location >= size) {
             tail.next = node;
             tail = node;
             tail.next = head;
 
             // Specified Location
-        }else{
+        } else {
             Node tempNode = head;
             int index = 0;
-            while(index < location){
+            while (index < location) {
                 tempNode = tempNode.next;
                 index++;
             }
@@ -52,16 +52,15 @@ public class Circular {
         size++;
 
 
-
     }
 
 
-    public boolean SearchElement(int val){
+    public boolean SearchElement(int val) {
 
-        if(head != null){
+        if (head != null) {
             Node temp = head;
-            for(int i = 0; i<size; i++){
-                if(temp.value != val){
+            for (int i = 0; i < size; i++) {
+                if (temp.value != val) {
                     System.out.println("found the Element in the LinkedList:  ");
                     return true;
                 }
@@ -73,4 +72,59 @@ public class Circular {
     }
 
 
+    public void deleteNode(int location){
+        // If Linked List Size is equal to zero
+        if(head == null){
+            System.out.println("CLL doesnt exist");
+            return;
+            //If We only only have one element in the List
+        } else if (location == 0) {
+            head = head.next;
+            tail.next = head;
+            size--;
+            if (size == 0) {
+                tail = null;
+                head.next = null;
+                head = null;
+            }
+
+            // More than one element
+        } else if (location >= size) {
+            Node temp = head;
+            int i = 0;
+            for (i = 0; i < size; i++) {
+                temp = temp.next;
+            }
+
+
+            if (temp == head) {
+                head.next = null;
+                tail = head = null;
+                head = null;
+                size--;
+                return;
+
+            }
+            temp.next = head;
+            tail = temp;
+            size--;
+
+        } else {
+            Node temp = head;
+
+            for(int i =0; i<location - 1; i++){
+                temp = temp.next;
+            }
+
+            temp.next = temp.next.next;
+            size--;
+        }
+
+
+
+
+
+
+
+    }
 }
