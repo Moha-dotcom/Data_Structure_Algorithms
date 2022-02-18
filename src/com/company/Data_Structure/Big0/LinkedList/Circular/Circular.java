@@ -56,4 +56,21 @@ public class Circular {
     }
 
 
+    public boolean SearchElement(int val){
+
+        if(head != null){
+            Node temp = head;
+            for(int i = 0; i<size; i++){
+                if(temp.value != val){
+                    System.out.println("found the Element in the LinkedList:  ");
+                    return true;
+                }
+                temp = temp.next;
+            }
+        }
+        System.out.println("Element Not Found !");
+        return false;
+    }
+
+
 }

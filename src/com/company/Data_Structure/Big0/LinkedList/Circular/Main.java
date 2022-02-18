@@ -8,6 +8,7 @@ public class Main {
         circular.CreateSLL(12);
         circular.insert(43, 0);
         System.out.println(circular.head.value);
+        circular.SearchElement(43);
 
     }
 }
