@@ -11,7 +11,7 @@ public class Circular {
         this.size = size;
     }
 
-    public Node CreateSLL(int nodevalue) {
+    public Node CreateCLL(int nodevalue) {
         head = new Node();
         Node newNode = new Node(nodevalue, head );
         Circular circular = new Circular(newNode, newNode, 1);
