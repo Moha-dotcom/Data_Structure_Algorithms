@@ -5,6 +5,10 @@ public class Circular {
     public Node tail;
     int size;
 
+
+    public Circular() {
+    }
+
     public Circular(Node head, Node tail, int size) {
         this.head = head;
         this.tail = tail;
@@ -14,7 +18,9 @@ public class Circular {
     public Node CreateCLL(int nodevalue) {
         head = new Node();
         Node newNode = new Node(nodevalue, head );
-        Circular circular = new Circular(newNode, newNode, 1);
+        head = newNode;
+        tail = newNode;
+        size = 1;
         return head;
 
 
@@ -36,7 +42,7 @@ public class Circular {
         node.value = value;
 
         if (head == null) {
-            CreateSLL(value);
+            CreateCLL(value);
             // Front of the LinkedLst
         } else if (location == 0) {
             node.next = head;

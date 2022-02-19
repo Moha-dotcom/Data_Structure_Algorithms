@@ -12,4 +12,11 @@ public class Node {
         this.next = next;
         this.prev = prev;
     }
+
+    public Node() {
+    }
+
+    public Node(int value) {
+        this.value = value;
+    }
 }
