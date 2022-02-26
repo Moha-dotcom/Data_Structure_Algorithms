@@ -15,10 +15,12 @@ public class Main {
         doublyLinkedlist.insertion(12, 2);
 
 //        System.out.println(doublyLinkedlist.head.next.next.next.value);
-       doublyLinkedlist.transverse();
-       doublyLinkedlist.reverseTransverse();
-//       doublyLinkedlist.DeleteElement(10);
 
-//       doublyLinkedlist.transverse();
+        doublyLinkedlist.transverse();
+        System.out.println();
+        doublyLinkedlist.DeleteElement(9);
+
+
+       doublyLinkedlist.transverse();
     }
 }

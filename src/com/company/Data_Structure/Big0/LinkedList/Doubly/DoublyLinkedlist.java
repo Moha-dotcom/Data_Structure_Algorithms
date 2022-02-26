@@ -100,26 +100,24 @@ public class DoublyLinkedlist {
     }
 
 
-    public void DeleteElement(int val){
+    public void DeleteElement(int val) {
+        Node curNode = head;
 
 
-
-        if(head != null){
-            Node temp = head;
-
-
-
-            while(temp != null){
-                if(temp.value == val){
-                    temp.next = head;
-                    head = temp.prev;
-                }else {
-                    temp.prev.next = temp.next;
-                    temp.next = temp.prev.prev;
-                }
-
-                temp = temp.next;
+        if(val == head.value){
+            head = head.next;
+            head.prev = null;
+        }else if(val == tail.value)
+        {
+            tail = tail.prev;
+            tail.next = null;
+        }else {
+            while(curNode.value != val){
+                curNode = curNode.next;
             }
+
+            curNode.prev.next = curNode.next;
+            curNode.next.prev = curNode.prev;
         }
 
     }
