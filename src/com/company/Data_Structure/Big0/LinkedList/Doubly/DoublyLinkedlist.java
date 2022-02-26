@@ -67,5 +67,63 @@ public class DoublyLinkedlist {
     }
 
 
+    public void transverse(){
+        if(head != null){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.value + " -> ");
+                temp = temp.next;
+            }
+
+
+
+        }else{
+            System.out.println("Zero Elementds - >");
+        }
+    }
+
+
+    public void reverseTransverse(){
+
+
+        if(head != null){
+            Node temp = tail;
+            System.out.println();
+            while(temp != head){
+
+                System.out.print(temp.value + " - >");
+                temp = temp.prev;
+            }
+
+            System.out.println(temp.value);
+        }
+    }
+
+
+    public void DeleteElement(int val){
+
+
+
+        if(head != null){
+            Node temp = head;
+
+
+
+            while(temp != null){
+                if(temp.value == val){
+                    temp.next = head;
+                    head = temp.prev;
+                }else {
+                    temp.prev.next = temp.next;
+                    temp.next = temp.prev.prev;
+                }
+
+                temp = temp.next;
+            }
+        }
+
+    }
+
+
 
 }

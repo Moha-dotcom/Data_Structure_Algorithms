@@ -6,9 +6,19 @@ public class Main {
 
         DoublyLinkedlist doublyLinkedlist = new DoublyLinkedlist();
         doublyLinkedlist.createDoublyLinkedList(1);
-        doublyLinkedlist.insertion(2,0);
-        doublyLinkedlist.insertion(3, 1);
-        doublyLinkedlist.insertion(4, 2);
-        System.out.println(doublyLinkedlist.head.next.next.next.value);
+        doublyLinkedlist.insertion(9,0);
+        doublyLinkedlist.insertion(10, 1);
+        doublyLinkedlist.insertion(11, 2);
+        doublyLinkedlist.insertion(19, 2);
+        doublyLinkedlist.insertion(18, 2);
+        doublyLinkedlist.insertion(17, 2);
+        doublyLinkedlist.insertion(12, 2);
+
+//        System.out.println(doublyLinkedlist.head.next.next.next.value);
+       doublyLinkedlist.transverse();
+       doublyLinkedlist.reverseTransverse();
+//       doublyLinkedlist.DeleteElement(10);
+
+//       doublyLinkedlist.transverse();
     }
 }
