@@ -122,6 +122,21 @@ public class DoublyLinkedlist {
 
     }
 
+    public void DeleteEntireList(){
+        Node curNode = head;
+
+        while (curNode.next != null){
+            curNode = curNode.next;
+            curNode.prev = null;
+
+        }
+
+        head = null;
+        tail = null;
+        System.out.println();
+        System.out.println("DLL is deleted Entirely");
+    }
+
 
 
 }

@@ -22,5 +22,8 @@ public class Main {
 
 
        doublyLinkedlist.transverse();
+
+       doublyLinkedlist.DeleteEntireList();
+       doublyLinkedlist.transverse();
     }
 }
