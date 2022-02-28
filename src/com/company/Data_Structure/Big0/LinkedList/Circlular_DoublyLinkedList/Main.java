@@ -13,15 +13,22 @@ public class Main {
         cdl.insertion(4,19);
        cdl.insertion(7,20);
 
-        System.out.println("Forward Tranvese");
+//        System.out.println("Forward Tranvese");
+//        cdl.traverse();
+//
+//        System.out.println("Backward Tranvese");
+//        cdl.ReverseTraverse();
+//
+//
+//        System.out.println("Search Specific Element in the List: ");
+//        cdl.SearchNode(999);
         cdl.traverse();
 
-        System.out.println("Backward Tranvese");
-        cdl.ReverseTraverse();
+        System.out.println("Deleting Elements: ");
+        cdl.DeleteNode(2);
+        cdl.DeleteNode(3);
 
-
-        System.out.println("Search Specific Element in the List: ");
-        cdl.SearchNode(999);
-
+        System.out.println();
+        cdl.traverse();
     }
 }

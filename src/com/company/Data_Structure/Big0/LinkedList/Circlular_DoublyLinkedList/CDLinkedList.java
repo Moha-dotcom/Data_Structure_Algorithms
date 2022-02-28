@@ -118,4 +118,45 @@ public class CDLinkedList {
 
         }
 
+
+        public void DeleteNode(int location) {
+
+            if (head != null) {
+
+
+                if(location == 0){
+                    head = head.next;
+                    head.prev = tail;
+                    tail.next = head;
+                    size--;
+
+                }else if(location == size){
+
+                    tail = tail.prev;
+                    tail.next = head;
+                    head.prev = tail;
+                    size--;
+
+                }else{
+
+                    Node temp = head;
+                    int index = 0;
+
+                    while (index < location - 1) {
+
+                        temp = temp.next;
+                        index++;
+
+                }
+                    temp.next = temp.next.next;
+                    temp.next.prev = temp;
+
+                    size--;
+
+
+               }
+
+            }
+        }
+
 }
