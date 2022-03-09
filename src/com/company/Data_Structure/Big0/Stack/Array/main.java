@@ -35,8 +35,11 @@ public class main {
 
         System.out.println(stackLinkedList.pop());
         System.out.println(stackLinkedList.pop());
-        System.out.println(stackLinkedList.pop());
-        System.out.println(stackLinkedList.pop());
+//        System.out.println(stackLinkedList.pop());
+//        System.out.println(stackLinkedList.pop());
+
+
+        System.out.println( "Last Element is : " + stackLinkedList.peek());
 
         stackLinkedList.Iterator();
 
