@@ -1,4 +1,4 @@
-package com.company.Data_Structure.Recursivie;
+package com.company.Data_Structure.Recursion;
 
 public class FindLargestElement {
 

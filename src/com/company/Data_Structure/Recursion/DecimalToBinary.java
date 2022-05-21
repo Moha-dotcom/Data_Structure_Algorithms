@@ -9,6 +9,8 @@ public class DecimalToBinary {
 
         System.out.println(ConvertDecimalToBinary(b, a));
 
+        System.out.println(Sum(1, 0));
+
     }
 
     public static String ConvertDecimalToBinary(int decimal, String result){
@@ -18,6 +20,17 @@ public class DecimalToBinary {
 
         result += decimal % 2 ;
         return ConvertDecimalToBinary(decimal/2, result);
+    }
 
+
+    // Sum of Natural Number using Recursion
+
+    public static Integer Sum(Integer n, Integer addition){
+        if(n == 0 || n <= 1){
+            return addition;
+        }
+
+        addition += n;
+        return Sum(n-1, addition);
     }
 }
